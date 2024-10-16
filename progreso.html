@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Registro de Progreso</title>
+</head>
+<body>
+  <section id="registro">
+    <h2>Registro de Progreso</h2>
+    <form id="progresoForm">
+      <label for="fecha">Fecha:</label>
+      <input type="date" id="fecha" name="fecha" required>
+
+      <label for="ejercicio">Tipo de Ejercicio:</label>
+      <input type="text" id="ejercicio" name="ejercicio" placeholder="Ej: Correr, Levantar Pesas" required>
+
+      <label for="duracion">Duración (minutos):</label>
+      <input type="number" id="duracion" name="duracion" min="1" required>
+
+      <label for="calorias">Calorías Quemadas:</label>
+      <input type="number" id="calorias" name="calorias" min="0" required>
+
+      <label for="alimentos">Comida Consumida (opcional):</label>
+      <input type="text" id="alimentos" name="alimentos" placeholder="Ej: Ensalada, Pollo">
+
+      <button type="submit">Guardar</button>
+    </form>
+
+    <h3>Historial de Progreso</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Fecha</th>
+          <th>Ejercicio</th>
+          <th>Duración (min)</th>
+          <th>Calorías</th>
+          <th>Alimentos</th>
+        </tr>
+      </thead>
+      <tbody id="historial">
+        <!-- Aquí se mostrarán los registros -->
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Incluir el archivo de JavaScript al final para que cargue después del HTML -->
+  <script src="scripts.js"></script>
+</body>
+</html>
